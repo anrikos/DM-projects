@@ -1,45 +1,46 @@
 # Cisco Routers Data Sheet Scraper 🕷️📄
 
-Скрипт на базе **Puppeteer**, который автоматизирует процесс сбора информации о маршрутизаторах с официального сайта Cisco. Он извлекает категории продуктов, находит официальные спецификации (Data Sheets) и автоматически сохраняет их в формате PDF.
+An automated **Puppeteer** web scraper designed to extract router product categories from the official Cisco website, discover their technical specifications (Data Sheets), and automatically download/render them as clean PDF documents.
 
-## 🚀 Возможности
-- Сканирует листинг продуктов Cisco.
-- Рекурсивно переходит по ссылкам продуктов в поисках технической документации (`data sheet`).
-- Скрывает навязчивые куки-баннеры и чаты перед сохранением страницы, чтобы PDF-документы оставались чистыми.
-- Сохраняет структуру документов в автоматически создаваемую папку `cisco routers` с временной меткой в названии.
+## 🚀 Features
+- **Automated Discovery**: Scans the comprehensive Cisco router portfolio listing.
+- **Deep Scraping**: Recursively traverses individual product links to locate official `data sheet` documentation.
+- **Clean PDF Generation**: Automatically injects styles to hide intrusive cookie consent banners and live chat widgets before printing, ensuring flawless and distraction-free PDF layouts.
+- **Smart File Management**: Auto-generates a clean directory structure using ISO timestamps to keep your downloaded documents perfectly organized without overwriting previous runs.
 
-## 🛠️ Технологии
-- Node.js
-- Puppeteer (Headless Chrome)
-- Файловая система Node.js (`fs/promises`)
+## 🛠️ Tech Stack
+- **Node.js** (Runtime environment)
+- **Puppeteer** (Headless Chrome orchestration)
+- **Node.js File System** (`fs/promises` for asynchronous I/O)
 
-## 📋 Требования
-Для запуска проекта вам понадобятся:
-- Node.js (версии 16 или выше)
-- npm (идет в комплекте с Node.js)
+## 📋 Prerequisites
+Before running this project, ensure you have the following installed:
+- **Node.js** (v16.0.0 or higher)
+- **npm** (comes bundled with Node.js)
 
-## 🔧 Установка и запуск
+## 🔧 Installation & Setup
 
-1. Клонируйте репозиторий:
+1. **Clone the repository:**
    ```bash
    git clone https://github.com
    cd cisco-router-scraper
    ```
 
-2. Установите зависимости:
+2. **Install dependencies:**
    ```bash
    npm install
    ```
 
-3. Запустите скрипт:
+3. **Run the scraper:**
    ```bash
    npm start
    ```
 
-## 📂 Результаты работы
-После запуска скрипт создаст в корне проекта папку `cisco routers/`, в которой вы найдете:
-- Текстовый файл со списком категорий (например, `Routers_2026-10-12T14-30-00.000Z.txt`).
-- Скачанные PDF-файлы спецификаций для каждой найденной модели.
+## 📂 Output Structure
+Once execution begins, the script manages directories automatically and generates a `cisco routers/` folder in your project root:
+- **Product Categories Log**: A text file listing all scraped router categories (e.g., `Routers_2026-10-12T14-30-00-000Z.txt`).
+- **Data Sheets**: Properly formatted PDF files named after their source URL path segments (e.g., `pennultimate-segment-last-segment.pdf`).
 
-## 📝 Лицензия
-Этот проект распространяется под лицензией MIT. Подробнее см. в файле [LICENSE](LICENSE).
+## 📝 License
+This project is open-source and available under the [MIT License](LICENSE).
+
