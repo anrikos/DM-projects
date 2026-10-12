@@ -3,7 +3,7 @@
 An automated **Puppeteer** web scraper designed to extract router product categories from the official Cisco website, discover their technical specifications (Data Sheets), and automatically download/render them as clean PDF documents.
 
 <p align="center">
-  <img src="assets/cisco.gif" alt="Cisco" width="500">
+  <img src="assets/cisco.gif" alt="Cisco" width="600">
 </p>
 
 ## 🚀 Features
